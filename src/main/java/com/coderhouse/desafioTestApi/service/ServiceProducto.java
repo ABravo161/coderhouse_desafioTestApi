@@ -1,12 +1,12 @@
-package com.coderhouse.desafioMySQL.service;
+package com.coderhouse.desafioTestApi.service;
 
-import com.coderhouse.desafioMySQL.model.Producto;
-import org.springframework.stereotype.Service;
+import com.coderhouse.desafioTestApi.model.Producto;
 
 import java.util.List;
 
 
 public interface ServiceProducto {
+    void clearDB();
     List getAllProductos();
     Producto createProducto(Producto producto);
     Producto readProducto(Integer id);

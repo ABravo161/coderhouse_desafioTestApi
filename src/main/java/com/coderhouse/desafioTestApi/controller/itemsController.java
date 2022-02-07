@@ -1,18 +1,21 @@
-package com.coderhouse.desafioMySQL.controller;
+package com.coderhouse.desafioTestApi.controller;
 
-import com.coderhouse.desafioMySQL.model.Producto;
-import com.coderhouse.desafioMySQL.service.ServiceProducto;
+import com.coderhouse.desafioTestApi.model.Producto;
+import com.coderhouse.desafioTestApi.service.ServiceProducto;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/productos")
 public class itemsController {
 
-    @Autowired
-    ServiceProducto serviceProducto;
+    private final ServiceProducto serviceProducto;
+
 
     @GetMapping("/all")
     public List getAllProductos(){

@@ -1,7 +1,7 @@
-package com.coderhouse.desafioMySQL.service;
+package com.coderhouse.desafioTestApi.service;
 
-import com.coderhouse.desafioMySQL.model.Producto;
-import com.coderhouse.desafioMySQL.repository.RepositoryProductos;
+import com.coderhouse.desafioTestApi.model.Producto;
+import com.coderhouse.desafioTestApi.repository.RepositoryProductos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +16,7 @@ public class ServiceProductoImp implements ServiceProducto {
 
     @Override
     public List getAllProductos() {
-        List listaProductos = new ArrayList<>();
+        var listaProductos = new ArrayList<>();
         productos.findAll().forEach(listaProductos::add);
         return listaProductos;
     }
@@ -43,5 +43,10 @@ public class ServiceProductoImp implements ServiceProducto {
     public String deleteProducto(Integer id) {
         productos.deleteById(id);
         return "se borro el producto";
+    }
+
+    @Override
+    public void clearDB(){
+        productos.deleteAll();
     }
 }
