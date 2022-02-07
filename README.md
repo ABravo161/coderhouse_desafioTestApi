@@ -1,12 +1,12 @@
-#Andrés Bravo
-##Desafio Test Api Rest
-###resultado tests
+# Andrés Bravo
+## Desafio Test Api Rest
+### resultado tests
 ![](img/TestSummary.png)
-###print beforeAll
+### print beforeAll
 ![](img/beforeAll.png)
 
-###print before each
+### print before each
 ![](img/beforeEach.png)
 
-###print after all
+### print after all
 ![](img/afterAll.png)
